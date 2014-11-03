@@ -1,2 +1,35 @@
-<h1>Main#index</h1>
-<p>Find me in app/views/main/index.html.erb</p>
+<div class="row">
+  <div class="large-10 medium-10 small-10 columns">
+    <div class="msg-panel">
+      <div class="row">
+        <div class="large-11 medium-10 small-10 columns">
+          <p>
+            This is the message place. And this is a lo long story to talk about! So I need to talk long story to every one! I don't know if some one can understand me? Somebody can tell me about this?
+          </p>
+        </div>
+        <div class="large-1 medium-2 small-2 columns">
+          <a href="#" data-dropdown="drop">
+            <%= image_tag("fix.png", alt:"fix") %>
+          </a>
+          <ul id="drop" data-dropdown-content class="f-dropdown">
+            <li><a href="#">M</a></li>
+            <li><a href="#">D</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-1 large-offset-9
+                    medium-1 medium-offset-9
+                    small-1 small-offset-9 columns">
+            <a class="link-label" href="http://ohcoder.com" target="_blank">Java</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="large-2 medium-2 small-2 columns">
+    <a href="#">
+      <%= image_tag("note.png", alt:"note") %>
+    </a>
+
+  </div>
+</div>
