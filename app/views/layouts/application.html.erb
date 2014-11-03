@@ -12,22 +12,21 @@
   </head>
 
   <body>
-    <br>
-    <div class="row">
-      <div class="large-10 columns">
-        <%= link_to image_tag("wiki.png", alt:"wiki"), root_path %>
-      </div>
-      <div class="large-2 columns">
-        <br><%= link_to image_tag("snailegg_shadow.png", alt:"sanil_egg"), "mailto:coderliang@gmail.com?Subject=Hi%20Snow", :target=>"top" %>
-      </div>
-    </div>
+    <%= render "shared/header" %>
     <br>
     <div class="row">
       <div class="large-2 columns">&nbsp;</div>
       <div class="large-8 medium-9 columns">
         <%= yield %>
       </div>
-      <div class="large-2 medium-3 columns">&nbsp;</div>
+      <div class="large-2 medium-3 columns">
+        <div class="row">
+          <br>
+          <br>
+          <div class="large-3 columns">&nbsp;</div>
+          <div class="large-9 columns">Tags:</div>
+        </div>
+      </div>
     </div>
     <div class="row">
     </div>
