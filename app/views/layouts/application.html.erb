@@ -13,22 +13,8 @@
 
   <body>
     <%= render "shared/header" %>
-    <br>
-    <div class="row">
-      <div class="large-2 columns">&nbsp;</div>
-      <div class="large-8 medium-9 columns">
-        <%= yield %>
-      </div>
-      <div class="large-2 medium-3 columns">
-        <div class="row">
-          <br>
-          <br>
-          <div class="large-3 columns">&nbsp;</div>
-          <div class="large-9 columns">Tags:</div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
+    <%= render "shared/messages" %>
+   <div class="row">
     </div>
 
     <%= javascript_include_tag "application" %>
