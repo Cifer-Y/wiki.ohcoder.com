@@ -128,11 +128,8 @@ $include-html-global-classes: $include-html-classes;
   $body-bg-color: #E8FF95;  //snailegg
   $panel-bg-color: #F7FF4B; //snailegg
   $link-label-bg-color: #CE8F26;  //snailegg
-<<<<<<< HEAD
   $modify-btn-color: #4A90E2;       //snailegg
   $delete-btn-color: #D0021B;       //snailegg
-=======
->>>>>>> add_message
 
 @font-face{ font-family: "MyFont";
   src: url('Monaco.ttf') format('truetype');
@@ -346,7 +343,6 @@ $include-html-global-classes: $include-html-classes;
   padding: 3px 8px;
   border-radius: 5px;
 }
-<<<<<<< HEAD
 .modify-btn,
 .delete-btn{
   padding: 3px 8px;
@@ -366,16 +362,6 @@ a:hover,
 a:active{
     color: $black;
     text-decoration: none;
-=======
-a{
-  color: $black;
-}
-a:visited{
-  color: $black;
-}
-a:hover{
-  color: $black;
->>>>>>> add_message
 }
 
 textarea{

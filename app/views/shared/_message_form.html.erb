@@ -1,0 +1,30 @@
+<%=form_for :message do |f| %>
+  <fieldset>
+    <legend>Message</legend>
+    <div class="row">
+      <div class="row">
+        <div class="large-12 columns">
+          <%= f.text_area :text, :placeholder => "some description" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-4 medium-4 columns">
+          <%= f.text_field :site_name, :placeholder => "website name" %>
+        </div>
+        <div class="large-3 large-offset-5 medium-3 medium-offset-5 columns">
+          <%= f.text_field :tag, :placeholder => "tag" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <%= f.text_field :site_link, :placeholder => "website link" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-2 large-offset-10 columns">
+          <%= f.submit "Submit", :class=>"tiny radius button"%>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+<% end %>

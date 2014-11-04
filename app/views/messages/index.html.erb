@@ -1,0 +1,44 @@
+<div class="row">
+  <!--show message-->
+  <div class="large-10 medium-10 small-10 columns">
+    <% @messages.each do |msg| %>
+      <div class="msg-panel">
+        <div class="row">
+          <div class="large-11 medium-10 small-10 columns">
+            <p>
+              <%= msg.content %>
+            </p>
+          </div>
+          <div class="large-1 medium-2 small-2 columns">
+            <%= image_tag("fix.png", alt:"fix") %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-5 medium-5 small-5 columns">
+            <a class="link-label" href=<%=msg.site_link %> target="_blank">
+              <%= msg.site_name %>
+            </a>
+          </div>
+          <div class="large-2 large-offset-3
+                      medium-2 medium-offset-2
+                      small-2 small-offset-2 columns">
+                      <%= link_to "Modify", edit_message_path(msg), :class=>"modify-btn" %>
+          </div>
+          <div class="large-2 medium-3 small-3 columns">
+            <%= link_to "Delete", message_path(msg), method: :delete,:class=>"delete-btn", data:{ confirm: 'Are you sure?'} %>
+          </div>
+        </div>
+      </div>
+      <br>
+    <% end %>
+  </div>
+  <div class="large-2 medium-2 small-2 columns">
+    <a href="#" data-reveal-id="note">
+      <%= image_tag("note.png", alt:"note") %>
+    </a>
+    <div id="note" class="reveal-modal medium" data-reveal>
+      <%= render partial: "shared/message_form", locals:{message: @message} %>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
+  </div>
+</div>
