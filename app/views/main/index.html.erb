@@ -27,9 +27,43 @@
     </div>
   </div>
   <div class="large-2 medium-2 small-2 columns">
-    <a href="#">
+    <a href="#" data-reveal-id="note">
       <%= image_tag("note.png", alt:"note") %>
     </a>
+    <div id="note" class="reveal-modal medium" data-reveal>
+      <%=form_for :message do |f| %>
+        <fieldset>
+          <legend>Message</legend>
+          <div class="row">
+            <div class="row">
+              <div class="large-12 columns">
+                <%= f.text_area :text, :placeholder => "some description" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-4 medium-4 columns">
+                <%= f.text_field :site_name, :placeholder => "website name" %>
+              </div>
+              <div class="large-3 large-offset-5 medium-3 medium-offset-5 columns">
+                <%= f.text_field :site_tag, :placeholder => "tag" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-12 columns">
+                <%= f.text_field :site_addr, :placeholder => "website link" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-2 large-offset-10 columns">
+                <%= f.submit "Submit", :class=>"tiny radius button"%>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      <% end %>
+
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
 
   </div>
 </div>
