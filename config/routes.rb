@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :main
+  resources :tags do
+    resources :main
+  end
   root 'main#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -104,6 +104,7 @@ $include-html-global-classes: $include-html-classes;
 // $info-color: #a0d3e8;
 
 // $white       : #FFFFFF;
+  $white      : #FFFFFF;
 // $ghost       : #FAFAFA;
 // $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
@@ -120,15 +121,27 @@ $include-html-global-classes: $include-html-classes;
 // $charcoal    : #555555;
 // $tuatara     : #444444;
 // $oil         : #333333;
+ $oil         : #333333;  //snailegg
 // $jet         : #222222;
 // $black       : #000000;
-  $body-bg-color: #D9FF4F;
+  $black      : #000000;
+  $body-bg-color: #E8FF95;  //snailegg
+  $panel-bg-color: #F7FF4B; //snailegg
+  $link-label-bg-color: #CE8F26;  //snailegg
+  $modify-btn-color: #4A90E2;       //snailegg
+  $delete-btn-color: #D0021B;       //snailegg
+
+@font-face{ font-family: "MyFont";
+  src: url('Monaco.ttf') format('truetype');
+}   //snailegg
+
 
 // We use these to control various global styles
 // $body-bg: $white;
-  $body-bg: $body-bg-color;
+  $body-bg: $body-bg-color;  //snailegg
 // $body-font-color: $jet;
 // $body-font-family: $font-family-sans-serif;
+  $body-font-famlily: "MyFont";   //snailegg
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -143,6 +156,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
+  $global-radius: 5px;  //snailegg
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
@@ -314,6 +328,46 @@ $include-html-global-classes: $include-html-classes;
 // $microformat-abbr-font-weight: $font-weight-bold;
 // $microformat-abbr-font-decoration: none;
 
+
+// snailegg custom
+
+.msg-panel{
+  background-color: $panel-bg-color;
+  padding: 8px;
+  box-shadow: 0.5px 0.5px 3px 0.5px $oil;
+  border-radius: 5px;
+  font-family: "MyFont";
+}
+.link-label{
+  background-color: $link-label-bg-color;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+.modify-btn,
+.delete-btn{
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: small;
+}
+.modify-btn{
+  background-color: $modify-btn-color;
+ }
+.delete-btn{
+  background-color: $delete-btn-color;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+    color: $black;
+    text-decoration: none;
+}
+
+textarea{
+    resize: vertical;
+}
+
 // 01. Accordion
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -434,9 +488,12 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
+  $button-font-family: "MyFont";  //snailegg
 // $button-font-color: $white;
+  $button-font-color: $black;  //snailegg
 // $button-font-color-alt: $oil;
 // $button-font-tny: rem-calc(11);
+  $button-font-tny: rem-calc(14);  //snailegg
 // $button-font-sml: rem-calc(13);
 // $button-font-med: rem-calc(16);
 // $button-font-lrg: rem-calc(20);
@@ -642,11 +699,13 @@ $include-html-global-classes: $include-html-classes;
 // $fieldset-border-style: solid;
 // $fieldset-border-width: 1px;
 // $fieldset-border-color: $gainsboro;
+  $fieldset-border-color: $link-label-bg-color; //snailegg
 // $fieldset-padding: rem-calc(20);
 // $fieldset-margin: rem-calc(18 0);
 
 // We use these to style the legends when you use them
 // $legend-bg: $white;
+  $legend-bg: $panel-bg-color;  //snailegg
 // $legend-font-weight: $font-weight-bold;
 // $legend-padding: rem-calc(0 3);
 
@@ -972,6 +1031,8 @@ $include-html-global-classes: $include-html-classes;
 // $panel-header-adjust: true;
 // $callout-panel-link-color: $primary-color;
 
+
+
 // 22. Pricing Tables
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -1093,21 +1154,26 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to control the style of the modal itself.
 // $reveal-modal-bg: $white;
+  $reveal-modal-bg: $panel-bg-color;  //snailegg
 // $reveal-position-top: rem-calc(100);
 // $reveal-default-width: 80%;
 // $reveal-max-width: $row-width;
 // $reveal-modal-padding: rem-calc(20);
 // $reveal-box-shadow: 0 0 10px rgba($black,.4);
+  $reveal-box-shadow: 1px 1px 10px 5px rgba($black, .4);  //snailegg
 
 // We use these to style the reveal close button
 // $reveal-close-font-size: rem-calc(40);
+  $reveal-close-font-size: rem-calc(30); //snailegg
 // $reveal-close-top: rem-calc(8);
 // $reveal-close-side: rem-calc(11);
 // $reveal-close-color: $base;
+  $reveal-close-color: $black;  //snailegg
 // $reveal-close-weight: $font-weight-bold;
 
 // We use this to set the default radius used throughout the core.
 // $reveal-radius: $global-radius;
+  $reveal-radius: $global-radius;  //snailegg
 // $reveal-round: $global-rounded;
 
 // We use these to control the modal border
@@ -1322,7 +1388,9 @@ $include-html-global-classes: $include-html-classes;
 // We use these to control border styles
 // $thumb-border-style: solid;
 // $thumb-border-width: 4px;
+  $thumb-border-width: 0.5px;  //snailegg
 // $thumb-border-color: $white;
+  $thumb-border-color: $oil;  //snailegg
 // $thumb-box-shadow: 0 0 0 1px rgba($black,.2);
 // $thumb-box-shadow-hover: 0 0 6px 1px rgba($primary-color,0.5);
 

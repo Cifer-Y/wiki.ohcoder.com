@@ -12,25 +12,9 @@
   </head>
 
   <body>
-    <br>
-    <div class="row">
-      <div class="large-10 columns">
-        <%= link_to image_tag("wiki.png", alt:"wiki"), root_path %>
-      </div>
-      <div class="large-2 columns">
-        <br><%= link_to image_tag("snailegg_shadow.png", alt:"sanil_egg"), "mailto:coderliang@gmail.com?Subject=Hi%20Snow", :target=>"top" %>
-      </div>
-    </div>
-    <br>
-    <div class="row">
-      <div class="large-2 columns">&nbsp;</div>
-      <div class="large-8 medium-9 columns">
-        <%= yield %>
-      </div>
-      <div class="large-2 medium-3 columns">&nbsp;</div>
-    </div>
-    <div class="row">
-    </div>
+    <%= render "shared/header" %>
+    <%= render "shared/messages" %>
+    <%= render "shared/footer" %>
 
     <%= javascript_include_tag "application" %>
   </body>
