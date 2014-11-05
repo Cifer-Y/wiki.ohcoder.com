@@ -9,10 +9,6 @@ class MessagesController < ApplicationController
       redirect_to messages_path
     end
   end
-  def edit
-  end
-  def update
-  end
   def destroy
     @message = Message.find(params[:id])
     if @message.destroy
@@ -21,7 +17,6 @@ class MessagesController < ApplicationController
   end
 
   private
-
     def message_params
       params.require(:message).permit(:content, :site_name, :site_link)
     end
