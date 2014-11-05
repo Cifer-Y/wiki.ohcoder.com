@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  resources :tags do
-    resources :messages
-  end
-
   resources :messages
+
+  get '/messages/:id/tag' => 'messages#tags_show', :as => 'tag'
 
   root "messages#index"
 

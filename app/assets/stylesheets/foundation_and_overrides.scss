@@ -334,20 +334,23 @@ $include-html-global-classes: $include-html-classes;
 .msg-panel{
   background-color: $panel-bg-color;
   padding: 8px;
-  box-shadow: 0.5px 0.5px 3px 0.5px $oil;
+  box-shadow: 1px 1px 3px 1px $oil;
   border-radius: 5px;
   font-family: "MyFont";
 }
-.link-label{
+.link-label,
+.tag-label{
   background-color: $link-label-bg-color;
   padding: 3px 8px;
   border-radius: 5px;
+  box-shadow: 1px 1px 3px 0.5px $oil;
 }
 .modify-btn,
 .delete-btn{
   padding: 3px 8px;
   border-radius: 5px;
   font-size: small;
+  box-shadow: 1px 1px 3px 0.5px $oil;
 }
 .modify-btn{
   background-color: $modify-btn-color;

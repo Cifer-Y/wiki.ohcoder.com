@@ -14,3 +14,14 @@
     </div>
   </div>
 </div>
+
+<!--show all tags-->
+<% content_for :all_tags do %>
+  <% @tags.each do |tag| %>
+    <p>
+      <a class="tag-label" href=<%= tag_path(tag) %>>
+        <%= tag.tag %>
+      </a>
+    </p>
+  <% end %>
+<% end %>

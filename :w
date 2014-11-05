@@ -9,14 +9,14 @@ class MessagesController < ApplicationController
   end
   def create
     message = Message.new(message_params)
-    message.tags.new(tag_params) unless Tag.find_by_tag(tag_params[:tag])
+    message.tags.new(tag_params)
     if message.save
       redirect_to messages_path
     end
   end
   def destroy
-    message = Message.find(params[:id])
-    if Tag.delete(message.tags) && message.destroy
+    @message = Message.find(params[:id])
+    if @message.destroy && Tag.delete(@message.tags)
       redirect_to messages_path
     end
   end

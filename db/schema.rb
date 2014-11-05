@@ -11,23 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141104153943) do
+ActiveRecord::Schema.define(version: 20141105164243) do
 
   create_table "messages", force: true do |t|
     t.text     "content"
     t.string   "site_name"
     t.string   "site_link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "taggings", force: true do |t|
+    t.integer  "message_id"
     t.integer  "tag_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "messages", ["tag_id"], name: "index_messages_on_tag_id"
-
   create_table "tags", force: true do |t|
     t.string   "tag"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "tag_index"
   end
+
+  add_index "tags", ["tag"], name: "index_tags_on_tag", unique: true
 
 end

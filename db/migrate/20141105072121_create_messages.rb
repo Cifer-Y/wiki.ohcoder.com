@@ -4,7 +4,6 @@ class CreateMessages < ActiveRecord::Migration
       t.text :content
       t.string :site_name
       t.string :site_link
-      t.references :tag, index: true
 
       t.timestamps
     end

@@ -1,15 +1,16 @@
 <br>
 <div class="row">
-  <div class="large-2 columns">&nbsp;</div>
-  <div class="large-8 medium-9 columns">
+  <div class="large-8 large-offset-2 medium-9 columns">
+    <!--call messages/index.html-->
     <%= yield %>
   </div>
   <div class="large-2 medium-3 columns">
     <div class="row">
       <br>
       <br>
-      <div class="large-3 columns">&nbsp;</div>
-      <div class="large-9 columns">Tags:</div>
+      <div class="large-9 large-offset-3 columns">
+        <%= yield :all_tags %>
+      </div>
     </div>
   </div>
 </div>
