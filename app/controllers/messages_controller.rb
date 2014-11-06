@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   def index
     @tags = Tag.all
+    @tags = Tag.remove_dup(@tags) if Tag.count > 0
     @messages = Message.all
   end
   def new
@@ -9,14 +10,16 @@ class MessagesController < ApplicationController
   end
   def create
     message = Message.new(message_params)
-    message.tags.new(tag_params) unless Tag.find_by_tag(tag_params[:tag])
+    message.tags.new(tag_params)
     if message.save
       redirect_to messages_path
     end
   end
   def destroy
     message = Message.find(params[:id])
-    if Tag.delete(message.tags) && message.destroy
+    Tag.delete(message.tags)
+    Tagging.delete(message.taggings)
+    if message.destroy
       redirect_to messages_path
     end
   end
