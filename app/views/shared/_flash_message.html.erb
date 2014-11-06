@@ -1,0 +1,15 @@
+<% if flash[:notice] %>
+  <div data-alert class="alert-box info round">
+    <%= flash[:notic] %>
+  </div>
+<% end %>
+<% if flash[:alert] %>
+  <div data-alert class="alert-box warning round">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+<% if flash[:error] %>
+  <div data-alert class="alert-box alert round">
+    <%= flash[:error] %>
+  </div>
+<% end %>

@@ -1,8 +1,19 @@
 <br>
 <div class="row">
-  <div class="large-10 medium-8 small-8 columns">
+  <div class="large-8 medium-8 small-8 columns">
     <%= link_to image_tag("wiki.png", alt:"wiki"), root_path %>
   </div>
+  <% if current_user %>
+    <h3>Hi, <%= link_to current_user.name %></h3>
+    <h3><%= link_to "Exit", logout_path, method: "delete" %></h3>
+  <% else %>
+    <div class="large-1 columns">
+      <%= link_to "Signup", signup_path %>
+    </div>
+    <div class="large-1 columns">
+      <%= link_to "Login", login_path %>
+    </div>
+  <% end %>
   <div class="large-2 medium-4 small-4 columns">
     <br><%= link_to image_tag("snailegg_shadow.png", alt:"sanil_egg"), "mailto:coderliang@gmail.com?Subject=Hi%20Snow", :target=>"top" %>
   </div>

@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+  get '/signup' => 'users#signup', :as => 'signup'
+  get '/login' => 'users#login', :as => 'login'
+  post '/create_login_session' => 'users#create_login_session'
+
   get 'tag/:tag' => 'messages#index', :as => 'tag'
-  resources :messages
+  resources :messages, only: [:index, :create, :destroy]
+  delete "logout" => "users#logout", :as => "logout"
+  resources :users, only: [:create]
   root "messages#index"
 
 
