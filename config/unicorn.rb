@@ -37,8 +37,8 @@ pid "/tmp/unicorn.wiki-ohcoder.pid"
 # By default, the Unicorn logger will write to stderr.
 # Additionally, ome applications/frameworks log to stderr or stdout,
 # so prevent them from going to /dev/null when daemonized here:
-stderr_path "/home/snow/public/ohcoder.com/logs/unicorn.wiki-ohcoder-err.log"
-stdout_path "/home/snow/public/ohcoder.com/logs/unicorn.wiki-ohcoder-out.log"
+stderr_path "/home/snow/public/ohcoder.com/wiki.ohcoder.com/log/unicorn.strerr.log"
+stdout_path "/home/snow/public/ohcoder.com/wiki.ohcoder.com/log/unicorn.strout.log"
 # combine Ruby 2.0.0dev or REE with "preload_app true" for memory savings
 # http://rubyenterpriseedition.com/faq.html#adapt_apps_for_cow
 preload_app true
