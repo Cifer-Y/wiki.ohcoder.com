@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :messages, dependent: :destroy
   has_secure_password
   before_create { generate_token(:token) }
   EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i

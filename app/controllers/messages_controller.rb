@@ -8,20 +8,16 @@ class MessagesController < ApplicationController
       @messages = Message.all
     end
   end
+
   def create
-    message = Message.new(message_params)
+    message = current_user.messages.new(message_params)
     message.tags.new(tag_params)
-    if message.save
-      redirect_to messages_path
-    end
+    redirect_to messages_path if message.save
   end
+
   def destroy
-    message = Message.find(params[:id])
-    Tag.delete(message.tags)
-    Tagging.delete(message.taggings)
-    if message.destroy
-      redirect_to messages_path
-    end
+    message = current_user.messages.find(params[:id])
+    redirect_to messages_path if message.destroy
   end
 
   private

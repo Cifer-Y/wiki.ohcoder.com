@@ -1,6 +1,7 @@
 class Message < ActiveRecord::Base
+  belongs_to :user
   has_many :taggings
-  has_many :tags, :through => :taggings
+  has_many :tags, :through => :taggings, dependent: :destroy
 
   scope :tag_with, lambda{|tag_name| joins(:tags).where("tags.tag = ?", tag_name)}
   scope :latter_than, lambda{|time| joins(:taggings).where("taggings.created_at > ?", time)}

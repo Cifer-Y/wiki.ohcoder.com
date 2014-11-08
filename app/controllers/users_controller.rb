@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def login
+
   end
 
   def create_login_session
