@@ -1,6 +1,17 @@
-<h3>Login</h3>
-<%= form_tag "/create_login_session" do %>
-  <%= text_field_tag :name, params[:name], placeholder:"name" %>
-  <%= text_field_tag :password, params[:password], placeholder:"password" %>
-  <%= submit_tag "Login", class: "tiny round button" %>
-<% end %>
+<div class="row">
+  <div class="row">
+    <div class="large-2 large-offset-3 medium-4 medium-offset-5 small-6 small-offset-3 columns">
+      <h3>Login</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 large-offset-3 medium-6 medium-offset-5 small-6 small-offset-3 columns">
+      <%= form_tag "/create_login_session" do %>
+        <%= text_field_tag :name, params[:name], placeholder:"name" %>
+        <%= text_field_tag :password, params[:password], placeholder:"password" %>
+        <%= submit_tag "Login", class: "tiny round button" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
