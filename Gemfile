@@ -41,4 +41,4 @@ gem 'unicorn'
 # gem 'debugger', group: [:development, :test]
 
 # Use Foundation css
-gem 'foundation-rails', '~> 5.4'
+gem 'foundation-rails', '5.3.1.0'
