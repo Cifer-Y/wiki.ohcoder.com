@@ -16,4 +16,11 @@
 /tmp
 
 # Ignore all .swp files.
+database.yml
+doc/
 /*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
