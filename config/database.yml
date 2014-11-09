@@ -21,5 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  database: wiki_ohcoder
+  pool: 5
+  username: snow_1024
+  password: 5ANd7X87O4oM3jJ
+  host: localhost
