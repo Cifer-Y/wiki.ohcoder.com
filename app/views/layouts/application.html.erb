@@ -8,6 +8,7 @@
 
     <%= stylesheet_link_tag    "application", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "vendor/modernizr", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -15,7 +16,5 @@
     <%= render "shared/header" %>
     <%= render "shared/messages" %>
     <%= render "shared/footer" %>
-
-    <%= javascript_include_tag "application" %>
   </body>
 </html>
