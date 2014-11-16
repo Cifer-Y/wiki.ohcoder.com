@@ -30,4 +30,7 @@ config/secrets.yml
 *.bowerrc
 bower.json
 
+# Ignore all .swp files.
+/*.swp
+
 *.secret
